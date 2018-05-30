@@ -13,7 +13,9 @@ const DATABASE_NAME = 'library'
 const DATABASE_URL = `mongodb://localhost:27017/${DATABASE_NAME}`;
 mongoose.connect(DATABASE_URL);
 
-
+// THESE EVENT LISTENERS ARE IMPORTANT
+// WITHOUT THEM YOU DONT KNOW IF YOU CONNECTED
+// OR HAD AN ERROR
 mongoose.connection.on('connected', () => {
 console.log(`Mongoose is connected to ${DATABASE_URL}`);
 });

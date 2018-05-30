@@ -4,8 +4,8 @@
     - [x] git setup
     - [x] npm init & installs
     - [x] project directory structure
-- [] setup node/express
-- [] setup mongoose to connect to the database
+- [x] setup node/express
+- [x] setup mongoose to connect to the database
 - [] setup router
 - [] have router send back all our books - GET
 - [] setup router to add a book - POST
