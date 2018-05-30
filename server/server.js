@@ -3,9 +3,7 @@ const app = express();
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended:true}));
-
-// require in our mongoose model
-const Book = require("./modules/models/book.schema")
+app.use(bodyParser.json());
 
 // connect to Mongo DB
 const mongoose = require('mongoose');
@@ -28,6 +26,8 @@ console.log(`Mongoose connection error: ${error}`);
 // add static files later...
 
 // add router later
+const bookRouter = require('./router/book.router');
+app.use('/book', bookRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log('server listening on port:', PORT));
